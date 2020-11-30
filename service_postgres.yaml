@@ -1,0 +1,13 @@
+kind: "Service"
+  apiVersion: "v1"
+  metadata:
+    name: "external-postgre-service"
+  spec:
+    ports:
+      -
+        name: "postgres"
+        protocol: "TCP"
+        port: 5432
+        targetPort: 5432 
+        nodePort: 0
+  selector: {}
